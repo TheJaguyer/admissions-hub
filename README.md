@@ -27,49 +27,56 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Navigation
+
 **LOGIN PAGE**
 
 At the login page you will see a form to enter your email and password. Emails and passwords can be found in the migration file within the database folder.
-To get you started here is the email and password.
+To get started, use email `temp@temp.com` and password `temp`
 
- ![Imgur](https://i.imgur.com/KOugM0P.gif)
- 
- #
- **EDIT PROFILE PAGE**
+![Imgur](https://i.imgur.com/KOugM0P.gif)
 
- Once you login it will bring you to the main dashboard. In the top right corner you will see a drop down that says Welcome.... followed by whatever firstname is associated with your user information(can be found in localstorage in chrome dev tools or look in your migration file)
+#
+
+**EDIT PROFILE PAGE**
+
+Once you login it will bring you to the main dashboard. In the top right corner you will see a drop down that says Welcome.... followed by whatever firstname is associated with your user information(can be found in localstorage in chrome dev tools or look in your migration file)
 Once you click on that a dropdown will appear click on view profile.
 
 ![Imgur](https://i.imgur.com/dajiCiZ.gif)
 
 - Click on the galvanize button in the top left corner to bring you back to the dashboard page.
-- Click logout in the dropdown menu to log you out. 
-- Edit your fields if you want to change your profile information once you click update account a paragraph tag will pop up underneath the button letting you know that the update was successful. 
+- Click logout in the dropdown menu to log you out.
+- Edit your fields if you want to change your profile information once you click update account a paragraph tag will pop up underneath the button letting you know that the update was successful.
+
 #
+
 **DASHBOARD**
 
-***ADD STUDENT***
+**_ADD STUDENT_**
 
-click add student to add a student. once you click on add student a custom modal will appear with form data that needs to be filled out once youve done so submit and the new data will show up on the list of students in the dashboard. 
+click add student to add a student. once you click on add student a custom modal will appear with form data that needs to be filled out once youve done so submit and the new data will show up on the list of students in the dashboard.
 
 ![Imgur](https://i.imgur.com/nFPLxif.gif)
 
 #
-***EDIT OR DELETE STUDENT***
+
+**_EDIT OR DELETE STUDENT_**
 
 Click on a student from the list and two more buttons will appear for editing and deleting
 
 ![Imgur](https://i.imgur.com/mn9ujbJ.gif)
 
-***EXPORT STUDENT INFO*** 
+**_EXPORT STUDENT INFO_**
 
-Click on the Export student info. Will pop up with a custom modal with two buttons one for download and another for email. 
+Click on the Export student info. Will pop up with a custom modal with two buttons one for download and another for email.
 
 ![Imgur](https://i.imgur.com/dm7YW0J.gif)
 
-- the email button does not work yet we did not have time to incorporate it. 
+- the email button does not work yet we did not have time to incorporate it.
+
 #
-***SELECT A CANDIDATE TO GET STARTED***
+
+**_SELECT A CANDIDATE TO GET STARTED_**
 
 - If a student has not conducted a test when you click on there info you will see a button pop up that says launch interview click that to navigate to the testing suite.
 - If a student has already conducted a test then two buttons will pop up, (resume interview, view notes)
@@ -77,15 +84,16 @@ Click on the Export student info. Will pop up with a custom modal with two butto
 ![Imgur](https://i.imgur.com/Bqxu5Am.gif)
 
 #
+
 **INTERVIEW PAGE**
 
-***GRADING STUDENTS***
+**_GRADING STUDENTS_**
 
 After clicking on the launch interview button it will bring you to the interview page. Here you can grade students based on there performance and how they interviewed. You can add notes as well as give them a star rating based on how well they completed the task. After inputing all of your notes and ratings for each question push the submit button and it will bring you back to the dashboard page.
 
 ![Imgur](https://i.imgur.com/HIqWagJ.gif)
 
-***SHARING INTERVIEW ROOM WITH STUDENT***
+**_SHARING INTERVIEW ROOM WITH STUDENT_**
 
 Copy the interview link and send to the prospective student so that you and the student can share a code space. The student will not be able to see the notes or problems.
 
@@ -123,34 +131,40 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 https://drive.google.com/file/d/19QuyGSSvIyi1YNiG9edoqgczmRQngQzu/view?usp=share_link
 
 #### MailHog 
+
 ##### Overview
+
 MailHog is an email testing tool for developers:
-* Configure your application to use MailHog for SMTP delivery
-* View messages in the web UI, or retrieve them with the JSON API
-* Optionally release messages to real SMTP servers for delivery
+
+- Configure your application to use MailHog for SMTP delivery
+- View messages in the web UI, or retrieve them with the JSON API
+- Optionally release messages to real SMTP servers for delivery
 
 ##### Installation
+
 MacOS
 
     $   brew update && brew install mailhog
 
-Then, start MailHog by running 
+Then, start MailHog by running
 
     $   mailhog 
 
 in the command line.
 
 ##### Nodemailer
-- is a module for Node.js applications to allow easy  email sending.
 
-##### Getting Started 
+- is a module for Node.js applications to allow easy email sending.
+
+##### Getting Started
+
 1. Install mailhog
 2. Run mailhog by typing $ mailhog in CLI
-3. Go to http://0.0.0.0:8025/ , you should see Web UI 
+3. Go to http://0.0.0.0:8025/ , you should see Web UI
 
 ![Mailhog](https://github.com/mailhog/MailHog/raw/master/docs/MailHog.png)
 
-4. Run express server by going to express directory and running node Express.mjs  in CLI
+4. Run express server by going to express directory and running node Express.mjs in CLI
 5. Go to login page
 6. Click on Forgot button
 7. Write your email
@@ -159,9 +173,8 @@ in the command line.
 
 ![Mailhog](https://media0.giphy.com/media/hOctYIGvFKaKDZxvLA/giphy.gif)
 
-
-
 ## Puppeteer
+
 Puppeteer is a Node.js library that provides a high-level API for controlling headless Chrome or Chromium over the DevTools Protocol.
 
 It allows you to automate tasks that would otherwise be time-consuming and repetitive, such as:
@@ -174,19 +187,14 @@ It allows you to automate tasks that would otherwise be time-consuming and repet
 
 We have incorporated several tests utilizing Puppeteer see the wiki for more information: https://github.com/gschool-blue-ocean/admissions-hub/wiki
 
-
 ## To-Do / Future Features
-- we wanted to finish the testing of every feature to make sure the application doesnt't contain any bugs. 
+
+- we wanted to finish the testing of every feature to make sure the application doesnt't contain any bugs.
 - as well as incorporationg jest with puppeteer.
 - Add the email csv functionality to the csv file for exporting student info
-- Refactor the code for forgot password on the login page. Note* CURRENTLY IT WORKS BUT ONLY SENDS THE EMAIL TO MAILHOG. 
+- Refactor the code for forgot password on the login page. Note\* CURRENTLY IT WORKS BUT ONLY SENDS THE EMAIL TO MAILHOG.
 - Link to third party services under account update
 
- ## Advice for the future group
+## Advice for the future group
 
-When we took over this project we almost deconstructed the file format. Our knee jerk reaction was to reformat the file structure based on how wierd it looked. Note: This file structure in ADMISSIONS HUB is formatted to work specifically with NEXT.JS framework. Please do your research on how NEXT.JS works before considering any refactoring of the code base. 
-
-
-
-
-
+When we took over this project we almost deconstructed the file format. Our knee jerk reaction was to reformat the file structure based on how wierd it looked. Note: This file structure in ADMISSIONS HUB is formatted to work specifically with NEXT.JS framework. Please do your research on how NEXT.JS works before considering any refactoring of the code base.
